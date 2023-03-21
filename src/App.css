@@ -1,38 +1,685 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+* {
+  /* modelo reset */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+.setaetitulo .seta{
+  animation: downarrow 0.6s infinite alternate ease-in-out;
+  z-index: 0;
+}
+@keyframes downarrow{
+  0% { -webkit-transform: translateY(0); opacity: 0.4;}
+  100% { -webkit-transform: translateY(0.4em); opacity: 0.9;}
+}
+
+.container {  /* TUDO */
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {   /* CABEÇALHO INCLUINDO NAROW */
+  background-image: url("./images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 2/1;
+  text-align: center;
+  padding: 0 5vh;
+}
+.logo{
+  align-self: flex-start;
+  margin: auto;
+  margin-left: 0;
+  width: 20%;
+}
+.hamburger{
+  display: none;
+}
+.menumobile{
+  display: none;
+}
+.menuelogo{
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+}
+.menudesktop{
+  color: #FFF;
+  /* background-color: black; */
+  margin: auto;
+  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: 60%;
+}
+.menudesktop small{
+  font-size: 1.2vw;
+  margin: auto;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.menudesktop small:hover{
+  border-bottom: 1px solid #FFF;
+  cursor: pointer;
+}
+.menudesktop button{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1.2vw;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin: auto;
+  margin-right: 0;
+  height: 100%;
+  width: 30%;
+  outline: none;
+  color: black;
+  background-color: #eef0f1;
+}
+.menudesktop button:hover{
+  color: #FFF;
+  background-color: #70CFFB;
+  cursor: pointer;
+}
+.setaetitulo{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 40%;
+  margin: auto;
+  margin-top: 8%;
+}
+.setaetitulo h1{
+  text-transform: uppercase;
+  font-size: 3vw;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  letter-spacing: .5vw;
+  color: #FFF;
+}
+.seta{
+  align-self: flex-start;
+  margin: auto;
+  height: 40%;
+}
+
+@media (max-width: 450px){  /* PARA HAMBURGER */
+  .hamburger{
+    display: flex;
+    margin: auto; margin-right: 0;
+    cursor: pointer;
+  }
+  .menudesktop{
+    display: none;
+  }
+  .menuelogo{
+    position: relative;
+    height: fit-content;
+    margin-top: 5vh;
+  }
+  .logo{
+    width: 30%;
+  }
+  .diagonal{
+    width: 10vh;
+    height: 10vh;
+    margin-top: 0;
+    margin-left: auto;
+    overflow: hidden;
+  }
+  .metade{
+    background-color: #FFF;
+    width: 100%; height: 100%;
+    transform: rotate(45deg);
+    margin-top: 50%;
+    margin-left: 50%;
+  }
+  .esconde{     /* magica */
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    z-index: 10;
+    display: none;
+  }
+  .esconde.mostrar{ /* magica */
+    display: block;
+  }
+  .menumobile{
+    margin: auto;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    justify-content: space-evenly;
+    font-size: 6vw;
+    color: #85828D;
+  }
+  .menumobile small{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .menumobile button{
+    font-size: 4vw;
+    font-family: 'Fraunces', serif; font-weight: 700;
+    text-transform: uppercase;
+    width: 40%; height: 15%;
+    background-color: #FBD601;
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .menumobile button:hover{
+    background-color: #70CFFB;
+    color: #FFF;
+  }
+  .setaetitulo h1{
+    margin-top: 20vh;
+    font-size: 5vw;
+  }
+  .seta{
+    margin-top: 10vh;
+  }
+}
+
+
+.linhadois {
+  display: flex;
+}
+/* *************************************** BRAND */
+.brand {
+  width: 50%;
+  aspect-ratio: 1/1;  /* para proporção */
+}
+.centrobrand {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /* para centro */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centrobrand h2 {
+  text-align: left;
+  font-size: 2.5vw;
+  width: 70%;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+}
+
+.centrobrand p {
+  margin-top: .7em;
+  font-size: 1.8vw;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.botaobrand{
+  width: fit-content;
+}
+.centrobrand button {
+  cursor: pointer;
+  margin-top: 1em;
+  background-color: transparent;
+  padding: 10px;
+  z-index: 10;
+}
+.linhabuttonbrand{
+  height: 8px;
+  margin-top: -16px;
+  background-color: yellow;
+  border-radius: 5px;
+  z-index: 0;
+} /* *************************************** fim BRAND novo */
+
+.ovo {
+  background-image: url("./images/desktop/image-transform.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 50%;
+  aspect-ratio: 1/1;
+}
+
+.linhatres {
+  display: flex;
+}
+
+/* ******************************* COPO SALMAO */
+.salmao {
+  background-image: url("./images/desktop/image-stand-out.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 50%;
+  aspect-ratio: 1/1;
+}
+/* ******************************* COPO SALMAO */
+/* ******************************* AUDIENCIA */
+.audiencia {
+  width: 50%;
+  aspect-ratio: 1/1;
+}
+.centroaudiencia {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /* para centro */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centroaudiencia h2 {
+  text-align: left;
+  font-size: 2.5vw;
+  width: 70%;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+}
+
+.centroaudiencia p {
+  margin-top: .7em;
+  font-size: 1.8vw;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.botaoaudiencia{
+  width: fit-content;
+}
+.botaoaudiencia button {
+  margin-top: 1em;
+  background-color: transparent;
+  padding: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+.linhabuttonaudiencia{
+  height: 8px;
+  margin-top: -16px;
+  background-color: #F5CBBF;
+  border-radius: 5px;
+  z-index: 0;
+}
+/* ******************************* fim AUDIENCIA */
+
+/* **************************** DESIGN E FOTO */
+.linhaquatro {
+  display: flex;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.designfoto{
+  width: 50%;
+  aspect-ratio: 720/600;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tituloetexto{
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 45%;
 }
+.designfoto h2{
+  font-size: 2.5vw;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+}
+.tituloetexto.design{
+  color: #23554C;
+}
+.tituloetexto.foto{
+  color: #155778  ;
+}
+.designfoto p{
+  margin-top: 15px;
+  font-size: 1.4vw;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.cereja {
+  background-image: url("./images/desktop/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.bergamota {
+  background-image: url("./images/desktop/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* **************************** FIM DESIGN E FOTO */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ************************ TESTEMUNHOS */
+.linhacinco {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 90vh;
+  padding: 5%;
+  text-align: center;
+}
+.testemunhoscentro{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.linhacinco h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 1.5vw; /* alterar */
+  color: #A8ABAE;
+}
+.testemunhos {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 5vh;
+  height: 40vh;
+}
+.person {
+  width: 30%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+.person p{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1.2vw;  /* alterar */
+}
+.nomeetitulo h3{
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 1.5vw; /* alterar */
+}
+.nomeetitulo small{
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: .9vw;  /* alterar */
+  color: #A8ABAE;
+}
+.person.thomas{
+  margin: 0 20px;
+}
+.fotoperfil{
+  border-radius: 50%;
+  align-self: flex-start;
+  height: 7vh;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+/* ************************ FIM TESTEMUNHOS */
+
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.leite {
+  background-image: url("./images/desktop/image-gallery-milkbottles.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 80/100;
+  width: 100%;
+}
+
+.laranja {
+  background-image: url("./images/desktop/image-gallery-orange.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 80/100;
+  width: 100%;
+}
+
+.cone {
+  background-image: url("./images/desktop/image-gallery-cone.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 80/100;
+  width: 100%;
+}
+
+.cubos {
+  background-image: url("./images/desktop/image-gallery-sugarcubes.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 80/100;
+  width: 100%;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  text-align: center;
+  background-color: aqua;
+  align-items: center;
+}
+
+.centro {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 80%;
+}
+.logofooter img {
+  height: 20%;
+}
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.about h3 {
+  margin: 0 10px;
+  color: #2C7566;
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+
+.about h3:hover {
+  color: #FFF;
+}
+
+.redes {
+  margin: 10px 20px;
+}
+
+.face:hover path {
+  fill: #FFF;
+  cursor: pointer;
+}
+
+.insta:hover path {
+  fill: #FFF;
+  cursor: pointer;
+}
+
+.twitter:hover path {
+  fill: #FFF;
+  cursor: pointer;
+}
+
+.pinterest:hover path {
+  fill: #FFF;
+  cursor: pointer;
+}
+
+.redes svg {
+  margin: 0 10px;
+}
+
+@media(max-width: 700px) {
+  .linhacinco {
+    flex-direction: row; /* aki */
+    height: fit-content; /* aki */
+    padding: 5vh; /* aki */
   }
-  to {
-    transform: rotate(360deg);
+  .testemunhoscentro{
+    top: 0; /* aki */
+    transform: translateY(0); /* aki */
   }
+  .linhacinco h2{
+    margin-bottom: 5vh; /* aki */
+    font-size: 3vw; /* aki */
+  }
+  .testemunhos {
+    flex-direction: column; /* aki */
+    margin: 0; /* aki */
+    height: 100%;/* aki */
+  }
+  .person {
+    width: 100%;  /* aki */
+    height: 40vh; /* aki */
+    padding: 5vh; /* aki */
+  }
+  .person p{
+    font-size: 2.4vw; /* aki */
+  }
+  .nomeetitulo h3{
+    font-size: 2.6vw; /* aki */
+  }
+  .nomeetitulo small{
+    font-size: 2vw; /* aki */
+  } 
+
+  .person.thomas{
+    margin: 5vh auto; /* aki */
+  }
+  .person{
+    margin: 0 auto; /* aki */
+  }
+}
+
+@media(max-width: 650px) {
+  .testemunhos {
+    flex-direction: column;
+  }
+
+  .items {
+    /* div envolve as quatro imagens lado a lado acima do footer */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .cubos {
+    background-image: url("./images/mobile/image-gallery-sugar-cubes.jpg");
+    aspect-ratio: 1;
+  }
+
+  .cone {
+    background-image: url("./images/mobile/image-gallery-cone.jpg");
+    aspect-ratio: 1;
+  }
+
+  .laranja {
+    background-image: url("./images/mobile/image-gallery-orange.jpg");
+    aspect-ratio: 1;
+  }
+
+  .leite {
+    background-image: url("./images/mobile/image-gallery-milkbottles.jpg");
+    aspect-ratio: 1;
+  }
+
+}
+
+@media(max-width: 450px) {
+  .container {
+    max-width: 100%;
+  }
+
+  header {
+    background-image: url("./images/mobile/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    aspect-ratio: 7/10;
+  }
+  .linhadois {
+    display: flex;
+    flex-direction: column;
+  }
+  /* **************************** BRAND */
+  .brand {
+    width: 100%;
+    aspect-ratio: 1/1;
+    order: 2;
+  }
+  .centrobrand h2 {
+    text-align: left;
+    font-size: 8vw;
+    width: 70%;
+  }
+  .centrobrand p {
+    margin-top: .7em;
+    font-size: 5vw;
+  }
+  .centrobrand button{
+    font-size: 5vw;
+  }
+  /* **************************** BRAND */
+  .ovo {
+    background-image: url("./images/mobile/image-transform.jpg");
+    background-color: aqua;
+    width: 100%;
+    aspect-ratio: 1/1;
+    order: 1;
+  }
+  .linhatres {
+    flex-direction: column;
+  }
+  .salmao {
+    width: 100%;
+  }
+
+  /* **************************** AUDIENCIA  */
+  .audiencia {
+    width: 100%;
+  }
+  .centroaudiencia h2 {
+    text-align: left;
+    font-size: 8vw;
+    width: 70%;
+  }
+  .centroaudiencia p {
+    margin-top: .7em;
+    font-size: 5vw;
+  }
+  .botaoaudiencia button {
+    font-size: 5vw;
+  }
+  /* **************************** FIM AUDIENCIA  */
+
+  
+  .linhaquatro {/* ************************* LINHA 4 */
+    flex-direction: column;
+  }
+  .designfoto h2{
+    font-size: 6vw;
+  }
+  .designfoto p{
+    font-size: 3vw;
+  }
+  .cereja {
+    width: 100%;
+  }
+  .bergamota {
+    width: 100%;
+  }/* ************************* fim LINHA 4 */
+
 }
