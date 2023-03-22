@@ -1,5 +1,6 @@
 # Desafio Sunnyside Agency Landing Page do site frontendmentor.io
 ![landing page](./src/outros/design/sunnyside.gif)
+<img width=470 src="src/outros/design/sunnyside.gif">
 
 ## Descrição:
 Página responsiva para diversas telas. Finalidade do site promover a instituição e as soluções da marca Sunnyside\
