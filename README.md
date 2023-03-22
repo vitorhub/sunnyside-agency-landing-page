@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Desafio Sunnyside Agency Landing Page do site frontendmentor.io
+![landing page](./src/outros/design/sunnyside.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição:
+Página responsiva para diversas telas. Finalidade do site promover a instituição e as soluções da marca Sunnyside\
+<a href="https://femsunnysideagencylandingpage.netlify.app/">Link do site, veja o responsivo</a>
 
-## Available Scripts
 
-In the project directory, you can run:
+## Indice
+- <a href="#aprendizagens">Aprendizagens</a>
+- <a href="#funcionalidades"> Funcionalidades </a>
+- <a href="#tecnologias"> Tecnologias </a>
+- <a href="#rodar"> Rodar </a>
+- <a href="#colaboradores"> Colaboradores </a>
+- <a href="#next"> Next </a>
+- <a href="#contato"> Contatos </a>
 
-### `npm start`
+## Aprendizagens
+- [x] Utilização do aspect-ratio do css mantendo proporção de tamanho dos elementos.
+- [x] Criação do arquivo de configuração para svg, png etc, requisitado pelo typescript
+- [x] Descoberta de métodos diversos de centralização vertical
+- [x] Utilização da medida vw para fontes mantendo proporção adaptada aos diversos tamanhos da tela
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Funcionalidades
+- [x] Pagina de promoção das soluções da instituição
+- [x] Acesso a redes sociais e projetos
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tecnologias
+1. [React](https://pt-br.reactjs.org)
+2. [Grid CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/)
+3. [Flexbox CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/)
+4. [Typescript](https://www.typescriptlang.org/docs/)
 
-### `npm test`
+## Rodar
+```bash
+# Projeto inicializado com Create React App
+# https://github.com/facebook/create-react-app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Clone o repositório na pasta desejada
+$ git clone https://github.com/vitorhub/sunnyside-agency-landing-page.git
 
-### `npm run build`
+# Acesse a pasta do projeto no seu terminal
+$ cd sunnyside-agency-landing-page/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Instale as dependencias
+$ npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Inicialize o projeto no navegador
+$ npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Para criar o arquivo de produção
+$ npm run build
 
-### `npm run eject`
+# A aplicação será acessada na porta 3000,
+acesse pelo navegador: http://localhost:3000
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Colaboradores
+Vitor Falcao\
+<img style="width: 100px" src="https://avatars.githubusercontent.com/u/29690449?v=4" alt="imagem desenvolvedor">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Next
+- [ ] Efeitos com javascript
+- [ ] Tipagem com typescript além da inferência
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contato
+<a href="https://www.linkedin.com/in/vitorfalcaodesenvolvedor/"> Linkedin </a>

@@ -499,22 +499,22 @@ header {   /* CABEÇALHO INCLUINDO NAROW */
   margin: 10px 20px;
 }
 
-.face:hover path {
+.face:hover path {  /* svg importante */
   fill: #FFF;
   cursor: pointer;
 }
 
-.insta:hover path {
+.insta:hover path { /* svg importante */
   fill: #FFF;
   cursor: pointer;
 }
 
-.twitter:hover path {
+.twitter:hover path { /* svg importante */
   fill: #FFF;
   cursor: pointer;
 }
 
-.pinterest:hover path {
+.pinterest:hover path { /* svg importante */
   fill: #FFF;
   cursor: pointer;
 }
