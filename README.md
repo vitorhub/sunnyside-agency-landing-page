@@ -1,5 +1,6 @@
 # Desafio Sunnyside Agency Landing Page do site frontendmentor.io
-![landing page](./src/outros/design/sunnyside.gif)
+<!--  ![landing page](./src/outros/design/sunnyside.gif) -->
+<img width=470 src="src/outros/design/sunnyside.gif">
 
 ## Descrição:
 Página responsiva para diversas telas. Finalidade do site promover a instituição e as soluções da marca Sunnyside\
@@ -10,9 +11,9 @@ Página responsiva para diversas telas. Finalidade do site promover a instituiç
 - <a href="#aprendizagens">Aprendizagens</a>
 - <a href="#funcionalidades"> Funcionalidades </a>
 - <a href="#tecnologias"> Tecnologias </a>
-- <a href="#rodar"> Rodar </a>
+- <a href="#rodar"> Como rodar? </a>
 - <a href="#colaboradores"> Colaboradores </a>
-- <a href="#next"> Next </a>
+- <a href="#next"> Proximos passos </a>
 - <a href="#contato"> Contatos </a>
 
 ## Aprendizagens
@@ -31,7 +32,7 @@ Página responsiva para diversas telas. Finalidade do site promover a instituiç
 3. [Flexbox CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/)
 4. [Typescript](https://www.typescriptlang.org/docs/)
 
-## Rodar
+## rodar
 ```bash
 # Projeto inicializado com Create React App
 # https://github.com/facebook/create-react-app
@@ -59,7 +60,7 @@ acesse pelo navegador: http://localhost:3000
 Vitor Falcao\
 <img style="width: 100px" src="https://avatars.githubusercontent.com/u/29690449?v=4" alt="imagem desenvolvedor">
 
-## Next
+## next
 - [ ] Efeitos com javascript
 - [ ] Tipagem com typescript além da inferência
 

@@ -72,6 +72,10 @@ header {   /* CABEÇALHO INCLUINDO NAROW */
   border-bottom: 1px solid #FFF;
   cursor: pointer;
 }
+
+.menudesktop button a:hover{
+  color: #FFF;
+}
 .menudesktop button{
   font-family: 'Barlow', sans-serif;
   font-weight: 600;

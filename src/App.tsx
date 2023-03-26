@@ -9,22 +9,14 @@ import seta from './images/icon-arrow-down.svg'
 
 function App() {
 
-  function textSpanIsEmpty(e: any) {
-    const iconehamb: any = document.getElementById(e);
-    const menu: any = document.getElementById("menususpenso");
-  iconehamb.addEventListener("click",
-    ()=>{
-      console.log("bundinha")
-      menu.classList.toggle("mostrar");
-    }
-  )
-
-
-//    iconehamb.addEventListener("click",
-      // () => { }
-        //    navegacao.classList.toggle("mostrar");
-        console.log(e)
-//    )
+  function textSpanIsEmpty(e: string) {
+    const iconehamb = document.getElementById(e)!;
+    const menu = document.getElementById("menususpenso")!;
+    iconehamb.addEventListener("click",
+      () => {
+        menu.classList.toggle("mostrar");
+      }
+    )
   }
 
   return (
@@ -39,7 +31,12 @@ function App() {
               <small>Projects</small>
               <button><a href="#contato">Contact</a> </button>
             </div>
-            <img src={hamb} id="imghamb" onLoad={()=>textSpanIsEmpty("imghamb")} className="hamburger" alt="hamburger" />
+            <img src={hamb}
+              id="imghamb"
+              onLoad={() => textSpanIsEmpty("imghamb")}
+              className="hamburger"
+              alt="hamburger"
+            />
           </div>
           <div id='menususpenso' className="esconde">
             <div className="diagonal">
@@ -180,6 +177,7 @@ function App() {
 
         <Footer />
       </div>
+      <script id="pixel-chaty" async={true} src="https://cdn.chaty.app/pixel.js?id=OJ5Lv4Iz"></script>
     </>
   );
 }
