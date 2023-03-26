@@ -177,7 +177,6 @@ function App() {
 
         <Footer />
       </div>
-      <script id="pixel-chaty" async={true} src="https://cdn.chaty.app/pixel.js?id=OJ5Lv4Iz"></script>
     </>
   );
 }
